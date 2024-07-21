@@ -1,0 +1,146 @@
+:root{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white:hsl(0, 0%, 100%);
+    --light-gray:hsl(0, 0%, 81%);
+    -light-grayish-blue:hsl(210, 46%, 95%)
+}    
+*{
+    box-sizing: border-box;
+}
+p{
+    font-size: 16px;
+}
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    gap: 30px;
+}
+.container>section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex:3;
+}
+.container>aside{
+    flex: 1;
+}
+
+
+.container>section>article{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+
+}
+.white{
+    font-size: 18pt;
+    font-weight: 500;
+}
+.gray{
+    color:var(--light-gray);
+}
+img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.container>section>article header,
+.container>aside>.info-5 header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+.container>section>article>div{
+    border-radius: 12px;
+    padding: 20px 20px;
+    color:var(--white);
+}
+.item{
+    position: relative;
+    z-index:9;
+}
+
+.container>section>article>.info-1{
+    background-color: var(--moderate-violet);
+    flex:2;
+    position: relative; 
+    
+}
+
+.info-1 svg{
+    position: absolute;
+    right: 30px;
+    top:80px;
+    
+}
+
+
+.container>section>article>.info-2{
+    background-color: var(--very-dark-grayish-blue);
+    flex:1
+}
+
+.container>section>article>.info-3{
+    background-color: var(--white);
+    flex:1;
+    color:var(--very-dark-blackish-blue)
+}
+.container>section>article>.info-4{
+    background-color:var(--very-dark-blackish-blue);
+    flex:2;
+    color:var(--white)
+}
+
+.info-5{
+    background-color: var(--white);
+    flex:1;
+    color:var(--very-dark-blackish-blue);
+    border-radius: 12px;
+    padding: 12px 20px;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px auto;
+    }
+    .container>section{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex:1;
+    }
+    .container>aside{
+        flex: 1;
+    }
+    .container>section>article{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-around;
+    
+    }
+    .container>section>article>.info-1,
+    .container>section>article>.info-2,
+    .container>section>article>.info-3,
+    .container>section>article>.info-4{
+        flex:1
+    }
+    
+  }
